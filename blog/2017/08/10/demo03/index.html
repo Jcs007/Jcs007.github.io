@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My Octopress Blog</title>
+  <title>Front End Test - My Octopress Blog</title>
   <meta name="author" content="Jcs007">
 
   
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcs007.github.io/">
+  <link rel="canonical" href="http://jcs007.github.io/blog/2017/08/10/demo03/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
@@ -66,15 +66,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2017/08/10/demo03/">Front End Test</a></h1>
+      <h1 class="entry-title">Front End Test</h1>
     
     
       <p class="meta">
@@ -90,7 +87,7 @@
   </header>
 
 
-  <div class="entry-content"><h1>前端面试题总结</h1>
+<div class="entry-content"><h1>前端面试题总结</h1>
 
 <ul>
 <li><p>对web标准盒w3c的理解和认识</p>
@@ -172,167 +169,64 @@ CSS基本盒模型：内容、border、margin、padding;弹性盒模型、流式
 </ul>
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2017/08/07/demo02/">Response Layout</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2017-08-07T13:43:29+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>1:43 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h1>响应式布局</h1>
-
-<ul>
-<li><p>@media</p>
-
-<blockquote><p>Media Queries：其作用就是允许添加表达式用以确定媒体的环境情况，以此来应用不同的样式表。换句话说，其允许我们在不改变内容的情况下，改变页面的布局以精确适应不同的设备</p></blockquote>
-
-<ul>
-<li><p>适配移动端，在head标签里加入一下语句
-<code>
-&lt;meta name="viewport" content="width=device-width,initial-scale=1"/&gt;
-</code></p></li>
-<li><p>响应式布局的写法</p></li>
-</ul>
-
-
-<pre><code class="``">  1、&lt;link rel="stylesheet" type="text/css" href="styleB.css" media="screen and (min-width:600px) and (max-width:800px)"&gt;
-</code></pre>
-
-<pre><code class="``">  2、&lt;link rel="stylesheet" type="text/css" href="styleA.css" media="screen and (min-width:400px)"&gt;
-</code></pre>
-
-<pre><code class="``">  3、&lt;link rel="stylesheet" media="only screen and(-webkit-min-device-pixel-ratio:2)" type="text/css" href="iphone4.css"/&gt;/*(orientation:portrait)横向（landscape)*/
-</code></pre>
-
-<pre><code class="``">  4、&lt;style type="text/css"&gt;
-      @media only screen and(max-width:400px){/*当屏幕尺寸小于400px时，应用下面的CSS样式*/
-          .class{
-              background:#ccc;
-          }
-      }
-      &lt;/style&gt;
-</code></pre>
-
-<ul>
-<li>Hack（老式浏览器并不支持Media Queries,比如IE9，可以借助JS的库）</li>
-</ul>
-
-
-<pre><code class="``">  &lt;!--[if it IE9]&gt;
-      &lt;script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"&gt;&lt;/script&gt;
-  &lt;![endif]--&gt;
-</code></pre>
-
-<ul>
-<li><p>注意事项</p>
-
-<ul>
-<li><p>First</p>
-
-<pre><code class="``">  html{font-size:62.5%;} font-size:2rem==font-size:20px;
-</code></pre>
-
-<blockquote><p>默认字体大小是16px,16*62.5%=10px,1rem=10px。rem只相对HTNL或body的字体大小，没有继承父级尺寸的关系，但是em有继承父级尺寸的关系。</p></blockquote></li>
-<li><p>Second</p>
-
-<blockquote><p>min-width&amp;max-width的意思是最小宽度和最大宽度</p></blockquote></li>
-<li><p>Third</p>
-
-<blockquote><p>div布局尽量用百分比，不使用固定像素</p></blockquote></li>
-<li><p>Forth</p>
-
-<pre><code class="``">  box-sizing:border-box;
-</code></pre>
-
-<blockquote><p>标准盒模型里面撑的时候，外面会变大，设置了box-sizing后，固定和盒模型的大小，不会被撑大。</p></blockquote></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-</div>
-  
   
 
+<span class="byline author vcard">Posted by <span class="fn">Jcs007</span></span>
 
-    </article>
-  
-  
-    <article>
       
-  <header>
+
+
+
+
+<time class='entry-date' datetime='2017-08-10T16:16:18+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>4:16 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/mian-shi-ti/'>面试题</a>
+  
+</span>
+
+
+    </p>
     
-      <h1 class="entry-title"><a href="/blog/2017/08/07/demo01/">Basis of Picture Theory</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2017-08-07T13:29:29+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>1:29 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>常见图片格式</h2>
-
-<p><font color=Peru>1. PNG</font></p>
-
-<pre><code>透明、无损压缩、色彩少、ie6不支持、渐进显示和流式读写（网速慢时先出现轮廓，再逐渐清晰---递增式编码[Progressive Encoding])
-</code></pre>
-
-<p><font color=VioletRed>2. JPG</font></p>
-
-<pre><code>色彩多、有损压缩、基本显示效果（从上到下一条一条逐渐加载---顺序编码[Sequential Encoding]）
-</code></pre>
-
-<p><font color=GoldenRod>3. GIF</font></p>
-
-<pre><code>动态、可透明、不能半透、体积小、处理颜色少，处理锯齿效果差。后台统计日志和统计前端性能可以用GIF。
-</code></pre>
-
-<p><font color=SeaGreen>4. SVG</font></p>
-
-<pre><code>矢量图形、无损压缩、绘制路径xml语言（可以编程画出图像、圆角、锯齿处理得相当好）、浏览器支持差，主要用于移动端font-face。
-</code></pre>
+      <div class="sharing">
+  
+  
+  
+  
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32">
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_renren"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
 </div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
   
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2017/08/07/demo02/" title="Previous Post: Response layout">&laquo; Response layout</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -360,6 +254,7 @@ CSS基本盒模型：内容、border、margin、padding;弹性盒模型、流式
 
   
 </aside>
+
 
     </div>
   </div>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 面试题 | My Octopress Blog]]></title>
+  <link href="http://jcs007.github.io/blog/categories/mian-shi-ti/atom.xml" rel="self"/>
+  <link href="http://jcs007.github.io/"/>
+  <updated>2017-08-10T16:42:51+08:00</updated>
+  <id>http://jcs007.github.io/</id>
+  <author>
+    <name><![CDATA[Jcs007]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Front End Test]]></title>
+    <link href="http://jcs007.github.io/blog/2017/08/10/demo03/"/>
+    <updated>2017-08-10T16:16:18+08:00</updated>
+    <id>http://jcs007.github.io/blog/2017/08/10/demo03</id>
+    <content type="html"><![CDATA[<h1>前端面试题总结</h1>
+
+<ul>
+<li><p>对web标准盒w3c的理解和认识</p>
+
+<ul>
+<li>标签闭合、标签小写、不乱嵌套、提高搜索机器人的搜索几率【SEO】-HTML语义化、使用外链CSS和js脚本、结构行为表现的分离、文件下载与页面的速度更快、内容被更多的用户所访问、内容能被更广泛的设备所访问
+更少的代码和组件、容易维护、改版方便、不需要变动页面内容、提供打印版本不需要复制内容、提高网站易用性。</li>
+</ul>
+</li>
+<li><p>xhtml和HTML的区别</p>
+
+<ul>
+<li>HTML是一种基本的web网页设计语言，xhtml是一个基于XML的置标语言。最主要的不同：xhtml元素必须正确地嵌套、必须被关闭、标签名必须小写、xhtml文档必须拥有根元素。</li>
+</ul>
+</li>
+<li><p>Doctype严格模式与混杂模式，如何触发这两种模式，区分它们有何意义？</p>
+
+<ul>
+<li>用于声明文档使用规范（HTML/xhtml）一般为严格、过渡。基于框架的HTML文档加入XML声明可触发，解析方式更改为IE5.5，拥有IE5.5的bug。</li>
+</ul>
+</li>
+<li><p>行内元素有哪些？块级元素有哪些？CSS的盒模型？</p>
+
+<ul>
+<li>块级元素：div、p、h1、h2、h3、h4、form、ul;行内元素：a、b、br、i、span、input、select
+CSS基本盒模型：内容、border、margin、padding;弹性盒模型、流式布局、响应式布局、两列式布局、怪异盒模型【CSS Hack】、标准盒模型。</li>
+</ul>
+</li>
+<li><p>CSS引入方式有哪些？link和@import的区别是？</p>
+
+<ul>
+<li>内联、内嵌、外链、导入;区别：同时加载、前者无兼容形问题，后者CSS2.1以下浏览器不支持、link支持使用js改变样式，后者不可。</li>
+</ul>
+</li>
+<li><p>CSS选择符有哪些？那些属性可以继承？优先级算法如何计算？内联和important哪个优先级高？</p>
+
+<ul>
+<li>标签选择符、类选择符、ID选择符。继承不如指定。ID>class>标签选择。important的优先级更高。</li>
+</ul>
+</li>
+<li><p>前端页面有那三层构成？分别是什么？作用是什么？</p>
+
+<ul>
+<li>结构HTML、行为js、表现CSS。</li>
+</ul>
+</li>
+<li><p>IMG标签上的title和ALT属性的区别？</p>
+
+<ul>
+<li> ALT当图片不显示是用文字代表，title为该属性提供信息，语义化。</li>
+</ul>
+</li>
+<li><p>描述CSS reset的作用和用途</p>
+
+<ul>
+<li>reset重置浏览器的CSS默认属性，浏览器的品种不同，样式不同，然后重置，让它们统一。</li>
+</ul>
+</li>
+<li><p>解释CSS sprite如何使用？</p>
+
+<ul>
+<li>CSS精灵把一堆小的图片整合到一张大的图片上，减少服务器对图片的请求次数。</li>
+</ul>
+</li>
+<li><p>为什么是语义化的HTML？</p>
+
+<ul>
+<li>直观的认识标签，对于搜索引擎的抓取有好处。</li>
+</ul>
+</li>
+<li><p>清除浮动的几种方式，各自的优缺点</p>
+
+<ul>
+<li><p>使用空标签清除浮动clear：both（理论上能清除任何标签。。。增加无意义的标签）</p></li>
+<li><p>使用overflow:auto(空标签元素清除浮动而不得不增加无意义代码的弊端，使用zoom：1用于兼容IE)</p></li>
+<li><p>使用after伪元素清除浮动（用于非IE浏览器）</p></li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
