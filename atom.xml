@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://jcs007.github.io/atom.xml" rel="self"/>
   <link href="http://jcs007.github.io/"/>
-  <updated>2017-08-10T16:59:44+08:00</updated>
+  <updated>2017-08-10T17:11:16+08:00</updated>
   <id>http://jcs007.github.io/</id>
   <author>
     <name><![CDATA[Jcs007]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Advice for HTML]]></title>
+    <link href="http://jcs007.github.io/blog/2017/08/10/demo04/"/>
+    <updated>2017-08-10T17:08:21+08:00</updated>
+    <id>http://jcs007.github.io/blog/2017/08/10/demo04</id>
+    <content type="html"><![CDATA[<h1>HTML的30条最佳实践</h1>
+
+<p>1、保持标签闭合
+2、声明正确的文档类型
+3、永远不要使用内联样式
+4、将所有外部css文件放入head标签内
+5、JavaScript文件放在底部
+6、永远不要使用内联JavaScript
+7、边开发、边验证
+8、下载firebug
+9、保持标签名小写
+10、使用H1到H6标签
+11、写博客时，将H1留给文章标题
+12、下载ySlow
+13、使用无序列表（UL）包裹导航菜单
+14、学习如何应对IE
+15、选择合适的IDE
+16、上线前，压缩代码
+17、精简、精简、再精简
+18、给所有的图片加上“ALT”属性
+19、通宵达旦
+20、查看源代码
+21、为所有的元素定义样式
+22、使用第三方服务
+23、学习每一个HTML标签
+24、掌握photoshop
+25、参与社区讨论</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Front End Test]]></title>
