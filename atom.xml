@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://jcs007.github.io/atom.xml" rel="self"/>
   <link href="http://jcs007.github.io/"/>
-  <updated>2017-08-10T17:53:48+08:00</updated>
+  <updated>2017-08-11T22:27:02+08:00</updated>
   <id>http://jcs007.github.io/</id>
   <author>
     <name><![CDATA[Jcs007]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Basis of Picture Theory---02]]></title>
+    <link href="http://jcs007.github.io/blog/2017/08/11/demo05/"/>
+    <updated>2017-08-11T21:59:03+08:00</updated>
+    <id>http://jcs007.github.io/blog/2017/08/11/demo05</id>
+    <content type="html"><![CDATA[<h1>网页里的图片</h1>
+
+<ul>
+<li><p>图片的引入有两种方式：</p>
+
+<ul>
+<li><p><img>标签引入</p></li>
+<li><p>背景图片url引入</p></li>
+</ul>
+
+
+<blockquote><p><img>标签方便搜索引擎找到图像并抓取数据，一般logo和“海报”区都用<img>标签引入。不希望搜索引擎抓取尽量使用背景图像的方式制作。IMG可以提高搜索引擎的搜索关键词。</p></blockquote></li>
+</ul>
+
+
+<h2>为了使网页快速的打开，其中一个解决方法是使网页图片占内存尽量小。下面是几种用PS处理图片大小的办法。</h2>
+
+<ul>
+<li><p>大图保存用存储为web所用格式&mdash;【200kb到500kb之间】。</p></li>
+<li><p>色彩丰富的图片存储为JPG格式。</p></li>
+<li><p>色彩单一，精度要求不高的存储为GIF格式。</p></li>
+<li><p>色彩不丰富，精度要求高的LOGO存储为PNG格式。</p></li>
+<li><p>小图单击右键转为智能对象，可快速保存对象。</p></li>
+<li><p>大图用选区选取图像区域，采用合并拷贝的方式。然后文件&ndash;新建区域&ndash;粘贴刚才拷贝的大图&ndash;使用“存储为web使用格式”可以优化调节图像品质以减小图像大小。</p></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Advice for HTML]]></title>

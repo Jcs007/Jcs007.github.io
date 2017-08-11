@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Response Layout - My Octopress Blog</title>
+  <title>Basis of Picture Theory---02 - My Octopress Blog</title>
   <meta name="author" content="Jcs007">
 
   
-  <meta name="description" content="响应式布局 @media Media Queries：其作用就是允许添加表达式用以确定媒体的环境情况，以此来应用不同的样式表。换句话说，其允许我们在不改变内容的情况下，改变页面的布局以精确适应不同的设备 适配移动端，在head标签里加入一下语句 &lt;meta name="viewport" &hellip;">
+  <meta name="description" content="网页里的图片 图片的引入有两种方式： 标签引入
+背景图片url引入 标签方便搜索引擎找到图像并抓取数据，一般logo和“海报”区都用标签引入。不希望搜索引擎抓取尽量使用背景图像的方式制作。IMG可以提高搜索引擎的搜索关键词。 为了使网页快速的打开，其中一个解决方法是使网页图片占内存尽量小。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcs007.github.io/blog/2017/08/07/demo02/">
+  <link rel="canonical" href="http://jcs007.github.io/blog/2017/08/11/demo05/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
@@ -69,7 +70,7 @@
   
   <header>
     
-      <h1 class="entry-title">Response Layout</h1>
+      <h1 class="entry-title">Basis of Picture Theory---02</h1>
     
     
       <p class="meta">
@@ -78,83 +79,37 @@
 
 
 
-<time class='entry-date' datetime='2017-08-07T13:43:29+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>1:43 pm</span></time>
+<time class='entry-date' datetime='2017-08-11T21:59:03+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>9:59 pm</span></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h1>响应式布局</h1>
+<div class="entry-content"><h1>网页里的图片</h1>
 
 <ul>
-<li><p>@media</p>
-
-<blockquote><p>Media Queries：其作用就是允许添加表达式用以确定媒体的环境情况，以此来应用不同的样式表。换句话说，其允许我们在不改变内容的情况下，改变页面的布局以精确适应不同的设备</p></blockquote>
+<li><p>图片的引入有两种方式：</p>
 
 <ul>
-<li><p>适配移动端，在head标签里加入一下语句
-<code>
-&lt;meta name="viewport" content="width=device-width,initial-scale=1"/&gt;
-</code></p></li>
-<li><p>响应式布局的写法</p></li>
+<li><p><img>标签引入</p></li>
+<li><p>背景图片url引入</p></li>
 </ul>
 
 
-<pre><code class="``">  1、&lt;link rel="stylesheet" type="text/css" href="styleB.css" media="screen and (min-width:600px) and (max-width:800px)"&gt;
-</code></pre>
-
-<pre><code class="``">  2、&lt;link rel="stylesheet" type="text/css" href="styleA.css" media="screen and (min-width:400px)"&gt;
-</code></pre>
-
-<pre><code class="``">  3、&lt;link rel="stylesheet" media="only screen and(-webkit-min-device-pixel-ratio:2)" type="text/css" href="iphone4.css"/&gt;/*(orientation:portrait)横向（landscape)*/
-</code></pre>
-
-<pre><code class="``">  4、&lt;style type="text/css"&gt;
-      @media only screen and(max-width:400px){/*当屏幕尺寸小于400px时，应用下面的CSS样式*/
-          .class{
-              background:#ccc;
-          }
-      }
-      &lt;/style&gt;
-</code></pre>
-
-<ul>
-<li>Hack（老式浏览器并不支持Media Queries,比如IE9，可以借助JS的库）</li>
+<blockquote><p><img>标签方便搜索引擎找到图像并抓取数据，一般logo和“海报”区都用<img>标签引入。不希望搜索引擎抓取尽量使用背景图像的方式制作。IMG可以提高搜索引擎的搜索关键词。</p></blockquote></li>
 </ul>
 
 
-<pre><code class="``">  &lt;!--[if it IE9]&gt;
-      &lt;script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"&gt;&lt;/script&gt;
-  &lt;![endif]--&gt;
-</code></pre>
+<h2>为了使网页快速的打开，其中一个解决方法是使网页图片占内存尽量小。下面是几种用PS处理图片大小的办法。</h2>
 
 <ul>
-<li><p>注意事项</p>
-
-<ul>
-<li><p>First</p>
-
-<pre><code class="``">  html{font-size:62.5%;} font-size:2rem==font-size:20px;
-</code></pre>
-
-<blockquote><p>默认字体大小是16px,16*62.5%=10px,1rem=10px。rem只相对HTNL或body的字体大小，没有继承父级尺寸的关系，但是em有继承父级尺寸的关系。</p></blockquote></li>
-<li><p>Second</p>
-
-<blockquote><p>min-width&amp;max-width的意思是最小宽度和最大宽度</p></blockquote></li>
-<li><p>Third</p>
-
-<blockquote><p>div布局尽量用百分比，不使用固定像素</p></blockquote></li>
-<li><p>Forth</p>
-
-<pre><code class="``">  box-sizing:border-box;
-</code></pre>
-
-<blockquote><p>标准盒模型里面撑的时候，外面会变大，设置了box-sizing后，固定和盒模型的大小，不会被撑大。</p></blockquote></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><p>大图保存用存储为web所用格式&mdash;【200kb到500kb之间】。</p></li>
+<li><p>色彩丰富的图片存储为JPG格式。</p></li>
+<li><p>色彩单一，精度要求不高的存储为GIF格式。</p></li>
+<li><p>色彩不丰富，精度要求高的LOGO存储为PNG格式。</p></li>
+<li><p>小图单击右键转为智能对象，可快速保存对象。</p></li>
+<li><p>大图用选区选取图像区域，采用合并拷贝的方式。然后文件&ndash;新建区域&ndash;粘贴刚才拷贝的大图&ndash;使用“存储为web使用格式”可以优化调节图像品质以减小图像大小。</p></li>
 </ul>
 
 </div>
@@ -172,12 +127,12 @@
 
 
 
-<time class='entry-date' datetime='2017-08-07T13:43:29+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>1:43 pm</span></time>
+<time class='entry-date' datetime='2017-08-11T21:59:03+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>9:59 pm</span></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/css/'>css</a>
+    <a class='category' href='/blog/categories/tu-pian-li-lun-ji-chu/'>图片理论基础</a>
   
 </span>
 
@@ -207,10 +162,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2017/08/07/demo01/" title="Previous Post: Basis of picture theory">&laquo; Basis of picture theory</a>
+        <a class="basic-alignment left" href="/blog/2017/08/10/demo04/" title="Previous Post: advice for HTML">&laquo; advice for HTML</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2017/08/09/demo03/" title="Next Post: Front end test">Front end test &raquo;</a>
       
     </p>
   </footer>
