@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://jcs007.github.io/atom.xml" rel="self"/>
   <link href="http://jcs007.github.io/"/>
-  <updated>2017-08-17T23:21:14+08:00</updated>
+  <updated>2017-08-19T00:27:22+08:00</updated>
   <id>http://jcs007.github.io/</id>
   <author>
     <name><![CDATA[Jcs007]]></name>
@@ -12,6 +12,248 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[React]]></title>
+    <link href="http://jcs007.github.io/blog/2017/08/19/demo08/"/>
+    <updated>2017-08-19T00:01:36+08:00</updated>
+    <id>http://jcs007.github.io/blog/2017/08/19/demo08</id>
+    <content type="html"><![CDATA[<h1>React入门</h1>
+
+<ul>
+<li>使用React的网页源码，结构如下。</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;!DOCTYPE html&gt;
+</span><span class='line'>&lt;html&gt;
+</span><span class='line'>  &lt;head&gt;
+</span><span class='line'>    &lt;script src="react.js"&gt;&lt;/script&gt;
+</span><span class='line'>    &lt;script src="react-dom.js"&gt;&lt;/script&gt;
+</span><span class='line'>    &lt;script src="browser.min.js"&gt;&lt;/script&gt;
+</span><span class='line'>  &lt;/head&gt;
+</span><span class='line'>  &lt;body&gt;
+</span><span class='line'>    &lt;div id="example"&gt;&lt;/div&gt;
+</span><span class='line'>    &lt;script type="text/babel"&gt;
+</span><span class='line'>      // ** Our code goes here! **
+</span><span class='line'>    &lt;/script&gt;
+</span><span class='line'>  &lt;/body&gt;
+</span><span class='line'>&lt;/html&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>ReactDOM.render是React的最基本的方法，用于将模版转为HTML语言，并插入指定的DOM节点。</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ReactDOM.render(
+</span><span class='line'>  &lt;h1&gt;Hello, world!&lt;/h1&gt;,
+</span><span class='line'>  document.getElementById('example')
+</span><span class='line'>);</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>JSX语法</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var names = ['Alice', 'Emily', 'Kate'];
+</span><span class='line'>
+</span><span class='line'>ReactDOM.render(
+</span><span class='line'>  &lt;div&gt;
+</span><span class='line'>  {
+</span><span class='line'>    names.map(function (name) {
+</span><span class='line'>      return &lt;div&gt;Hello, {name}!&lt;/div&gt;
+</span><span class='line'>    })
+</span><span class='line'>  }
+</span><span class='line'>  &lt;/div&gt;,
+</span><span class='line'>  document.getElementById('example')
+</span><span class='line'>);</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>组件</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var HelloMessage = React.createClass({
+</span><span class='line'>  render: function() {
+</span><span class='line'>    return &lt;h1&gt;Hello {this.props.name}&lt;/h1&gt;;
+</span><span class='line'>  }
+</span><span class='line'>});
+</span><span class='line'>
+</span><span class='line'>ReactDOM.render(
+</span><span class='line'>  &lt;HelloMessage name="John" /&gt;,
+</span><span class='line'>  document.getElementById('example')
+</span><span class='line'>);</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>this.props.children</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var NotesList = React.createClass({
+</span><span class='line'>  render: function() {
+</span><span class='line'>    return (
+</span><span class='line'>      &lt;ol&gt;
+</span><span class='line'>      {
+</span><span class='line'>        React.Children.map(this.props.children, function (child) {
+</span><span class='line'>          return &lt;li&gt;{child}&lt;/li&gt;;
+</span><span class='line'>        })
+</span><span class='line'>      }
+</span><span class='line'>      &lt;/ol&gt;
+</span><span class='line'>    );
+</span><span class='line'>  }
+</span><span class='line'>});
+</span><span class='line'>
+</span><span class='line'>ReactDOM.render(
+</span><span class='line'>  &lt;NotesList&gt;
+</span><span class='line'>    &lt;span&gt;hello&lt;/span&gt;
+</span><span class='line'>    &lt;span&gt;world&lt;/span&gt;
+</span><span class='line'>  &lt;/NotesList&gt;,
+</span><span class='line'>  document.body
+</span><span class='line'>);</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>PropTypes</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var MyTitle = React.createClass({
+</span><span class='line'>  propTypes: {
+</span><span class='line'>    title: React.PropTypes.string.isRequired,
+</span><span class='line'>  },
+</span><span class='line'>
+</span><span class='line'>  render: function() {
+</span><span class='line'>     return &lt;h1&gt; {this.props.title} &lt;/h1&gt;;
+</span><span class='line'>   }
+</span><span class='line'>});
+</span><span class='line'>var data = 123;
+</span><span class='line'>
+</span><span class='line'>ReactDOM.render(
+</span><span class='line'>  &lt;MyTitle title={data} /&gt;,
+</span><span class='line'>  document.body
+</span><span class='line'>);</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>getDefaultProps方法可以用来设置组件属性的默认值。</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var MyTitle = React.createClass({
+</span><span class='line'>  getDefaultProps : function () {
+</span><span class='line'>    return {
+</span><span class='line'>      title : 'Hello World'
+</span><span class='line'>    };
+</span><span class='line'>  },
+</span><span class='line'>
+</span><span class='line'>  render: function() {
+</span><span class='line'>     return &lt;h1&gt; {this.props.title} &lt;/h1&gt;;
+</span><span class='line'>   }
+</span><span class='line'>});
+</span><span class='line'>
+</span><span class='line'>ReactDOM.render(
+</span><span class='line'>  &lt;MyTitle /&gt;,
+</span><span class='line'>  document.body
+</span><span class='line'>);</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Compass]]></title>

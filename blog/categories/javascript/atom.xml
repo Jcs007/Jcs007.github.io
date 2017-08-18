@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Javascript | My Octopress Blog]]></title>
   <link href="http://jcs007.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://jcs007.github.io/"/>
-  <updated>2017-08-17T23:21:14+08:00</updated>
+  <updated>2017-08-19T00:27:22+08:00</updated>
   <id>http://jcs007.github.io/</id>
   <author>
     <name><![CDATA[Jcs007]]></name>
@@ -12,6 +12,156 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[React]]></title>
+    <link href="http://jcs007.github.io/blog/2017/08/19/demo08/"/>
+    <updated>2017-08-19T00:01:36+08:00</updated>
+    <id>http://jcs007.github.io/blog/2017/08/19/demo08</id>
+    <content type="html"><![CDATA[<h1>React入门</h1>
+
+<ul>
+<li>使用React的网页源码，结构如下。</li>
+</ul>
+
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;script src="react.js"&gt;&lt;/script&gt;
+    &lt;script src="react-dom.js"&gt;&lt;/script&gt;
+    &lt;script src="browser.min.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="example"&gt;&lt;/div&gt;
+    &lt;script type="text/babel"&gt;
+      // ** Our code goes here! **
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<ul>
+<li>ReactDOM.render是React的最基本的方法，用于将模版转为HTML语言，并插入指定的DOM节点。</li>
+</ul>
+
+
+<pre><code>ReactDOM.render(
+  &lt;h1&gt;Hello, world!&lt;/h1&gt;,
+  document.getElementById('example')
+);
+</code></pre>
+
+<ul>
+<li>JSX语法</li>
+</ul>
+
+
+<pre><code>var names = ['Alice', 'Emily', 'Kate'];
+
+ReactDOM.render(
+  &lt;div&gt;
+  {
+    names.map(function (name) {
+      return &lt;div&gt;Hello, {name}!&lt;/div&gt;
+    })
+  }
+  &lt;/div&gt;,
+  document.getElementById('example')
+);
+</code></pre>
+
+<ul>
+<li>组件</li>
+</ul>
+
+
+<pre><code>var HelloMessage = React.createClass({
+  render: function() {
+    return &lt;h1&gt;Hello {this.props.name}&lt;/h1&gt;;
+  }
+});
+
+ReactDOM.render(
+  &lt;HelloMessage name="John" /&gt;,
+  document.getElementById('example')
+);
+</code></pre>
+
+<ul>
+<li>this.props.children</li>
+</ul>
+
+
+<pre><code>var NotesList = React.createClass({
+  render: function() {
+    return (
+      &lt;ol&gt;
+      {
+        React.Children.map(this.props.children, function (child) {
+          return &lt;li&gt;{child}&lt;/li&gt;;
+        })
+      }
+      &lt;/ol&gt;
+    );
+  }
+});
+
+ReactDOM.render(
+  &lt;NotesList&gt;
+    &lt;span&gt;hello&lt;/span&gt;
+    &lt;span&gt;world&lt;/span&gt;
+  &lt;/NotesList&gt;,
+  document.body
+);
+</code></pre>
+
+<ul>
+<li>PropTypes</li>
+</ul>
+
+
+<pre><code>var MyTitle = React.createClass({
+  propTypes: {
+    title: React.PropTypes.string.isRequired,
+  },
+
+  render: function() {
+     return &lt;h1&gt; {this.props.title} &lt;/h1&gt;;
+   }
+});
+var data = 123;
+
+ReactDOM.render(
+  &lt;MyTitle title={data} /&gt;,
+  document.body
+);
+</code></pre>
+
+<ul>
+<li>getDefaultProps方法可以用来设置组件属性的默认值。</li>
+</ul>
+
+
+<pre><code>var MyTitle = React.createClass({
+  getDefaultProps : function () {
+    return {
+      title : 'Hello World'
+    };
+  },
+
+  render: function() {
+     return &lt;h1&gt; {this.props.title} &lt;/h1&gt;;
+   }
+});
+
+ReactDOM.render(
+  &lt;MyTitle /&gt;,
+  document.body
+);
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Event Handler]]></title>
