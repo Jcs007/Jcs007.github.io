@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://jcs007.github.io/blog/2017/08/24/demo09/</loc>
+<lastmod>2017-08-24T21:05:02+08:00</lastmod>
+</url>
+<url>
 <loc>http://jcs007.github.io/blog/2017/08/19/demo08/</loc>
 <lastmod>2017-08-19T00:01:36+08:00</lastmod>
 </url>
@@ -55,6 +59,9 @@
 </url>
 <url>
 <loc>http://jcs007.github.io/blog/categories/javascript/</loc>
+</url>
+<url>
+<loc>http://jcs007.github.io/blog/categories/math/</loc>
 </url>
 <url>
 <loc>http://jcs007.github.io/resume/demo/3dMagicCube/3DMagicCube.html</loc>
