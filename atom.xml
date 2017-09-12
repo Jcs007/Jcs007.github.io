@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://jcs007.github.io/atom.xml" rel="self"/>
   <link href="http://jcs007.github.io/"/>
-  <updated>2017-08-24T23:01:03+08:00</updated>
+  <updated>2017-09-12T17:31:28+08:00</updated>
   <id>http://jcs007.github.io/</id>
   <author>
     <name><![CDATA[Jcs007]]></name>
@@ -12,6 +12,63 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Demo10]]></title>
+    <link href="http://jcs007.github.io/blog/2017/09/12/demo10/"/>
+    <updated>2017-09-12T17:11:15+08:00</updated>
+    <id>http://jcs007.github.io/blog/2017/09/12/demo10</id>
+    <content type="html"><![CDATA[<h1>DOM</h1>
+
+<h3>使用write()和writeIn()方法动态的包含外部资源，例如javascript文件等，必须注意不能像下面的例子直接包含字符串“</script>”。这样会导致该字符串被解释为脚本块的结束，它后面的代码将无法执行。</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;html&gt;
+</span><span class='line'>&lt;head&gt;
+</span><span class='line'>  &lt;title&gt;document.write()&lt;/title&gt;
+</span><span class='line'>&lt;/head&gt;
+</span><span class='line'>&lt;body&gt;
+</span><span class='line'>  &lt;script type="text/javascript"&gt;
+</span><span class='line'>      document.write("&lt;script type=\"text/javascript\" src=\"file.js\"&gt;"+"&lt;/script&gt;");
+</span><span class='line'>  &lt;/script&gt;
+</span><span class='line'>&lt;/body&gt;
+</span><span class='line'>&lt;/html&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>字符串"</script>&ldquo;将被解释为与外部的<script>标签匹配，结果文本&rdquo;);将会出现在页面中。为了避免这个问题，在字符串"</script>&ldquo;中加入转义字符\即可。</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;html&gt;
+</span><span class='line'>&lt;head&gt;
+</span><span class='line'>  &lt;title&gt;document.write()&lt;/title&gt;
+</span><span class='line'>&lt;/head&gt;
+</span><span class='line'>&lt;body&gt;
+</span><span class='line'>  &lt;script type="text/javascript"&gt;
+</span><span class='line'>      document.write("&lt;script type=\"text/javascript\" src=\"file.js\"&gt;"+"&lt;\/script&gt;");
+</span><span class='line'>  &lt;/script&gt;
+</span><span class='line'>&lt;/body&gt;
+</span><span class='line'>&lt;/html&gt;</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Determinate]]></title>

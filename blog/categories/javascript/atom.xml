@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Javascript | My Octopress Blog]]></title>
   <link href="http://jcs007.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://jcs007.github.io/"/>
-  <updated>2017-08-24T23:01:03+08:00</updated>
+  <updated>2017-09-12T17:31:28+08:00</updated>
   <id>http://jcs007.github.io/</id>
   <author>
     <name><![CDATA[Jcs007]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Demo10]]></title>
+    <link href="http://jcs007.github.io/blog/2017/09/12/demo10/"/>
+    <updated>2017-09-12T17:11:15+08:00</updated>
+    <id>http://jcs007.github.io/blog/2017/09/12/demo10</id>
+    <content type="html"><![CDATA[<h1>DOM</h1>
+
+<h3>使用write()和writeIn()方法动态的包含外部资源，例如javascript文件等，必须注意不能像下面的例子直接包含字符串“</script>”。这样会导致该字符串被解释为脚本块的结束，它后面的代码将无法执行。</h3>
+
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;document.write()&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script type="text/javascript"&gt;
+        document.write("&lt;script type=\"text/javascript\" src=\"file.js\"&gt;"+"&lt;/script&gt;");
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3>字符串"</script>&ldquo;将被解释为与外部的<script>标签匹配，结果文本&rdquo;);将会出现在页面中。为了避免这个问题，在字符串"</script>&ldquo;中加入转义字符\即可。</h3>
+
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;document.write()&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script type="text/javascript"&gt;
+        document.write("&lt;script type=\"text/javascript\" src=\"file.js\"&gt;"+"&lt;\/script&gt;");
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[React]]></title>
