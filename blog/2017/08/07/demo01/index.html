@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Basis of Picture Theory - My Octopress Blog</title>
+  <title>Js笔记 - My Octopress Blog</title>
   <meta name="author" content="Jcs007">
 
   
-  <meta name="description" content="常见图片格式 1. PNG 透明、无损压缩、色彩少、ie6不支持、渐进显示和流式读写（网速慢时先出现轮廓，再逐渐清晰---递增式编码[Progressive Encoding]) 2. JPG 色彩多、有损压缩、基本显示效果（从上到下一条一条逐渐加载---顺序编码[Sequential &hellip;">
+  <meta name="description" content="for&hellip;in&hellip;和for&hellip;of&hellip;的区别。 for&hellip;in&hellip; 由于历史遗留问题，ta遍历的实际上是对象的属性名称。一个Array数组实际上是一个对象，ta的每个元素的索引被视为一个属性。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,7 +68,7 @@
   
   <header>
     
-      <h1 class="entry-title">Basis of Picture Theory</h1>
+      <h1 class="entry-title">Js笔记</h1>
     
     
       <p class="meta">
@@ -84,27 +84,47 @@
   </header>
 
 
-<div class="entry-content"><h2>常见图片格式</h2>
+<div class="entry-content"><h1>for&hellip;in&hellip;和for&hellip;of&hellip;的区别。</h1>
 
-<p><font color=Peru>1. PNG</font></p>
+<h2>for&hellip;in&hellip;</h2>
 
-<pre><code>透明、无损压缩、色彩少、ie6不支持、渐进显示和流式读写（网速慢时先出现轮廓，再逐渐清晰---递增式编码[Progressive Encoding])
-</code></pre>
+<blockquote><p>由于历史遗留问题，ta遍历的实际上是对象的属性名称。一个Array数组实际上是一个对象，ta的每个元素的索引被视为一个属性。当手动给Array对象添加了额外的属性后，for&hellip;in&hellip;循环将带来意想不到的意外效果。</p></blockquote>
 
-<p><font color=VioletRed>2. JPG</font></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var a=['A','B','C'];
+</span><span class='line'>a.name='Bob';
+</span><span class='line'>for(var x in a){
+</span><span class='line'>  console.log(x);//'0','1','2','name'
+</span><span class='line'>  console.log(a[x]);//'A','B','C','Bob'
+</span><span class='line'>  console.log(a.length);//3
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
 
-<pre><code>色彩多、有损压缩、基本显示效果（从上到下一条一条逐渐加载---顺序编码[Sequential Encoding]）
-</code></pre>
 
-<p><font color=GoldenRod>3. GIF</font></p>
+<h2>for&hellip;of&hellip;</h2>
 
-<pre><code>动态、可透明、不能半透、体积小、处理颜色少，处理锯齿效果差。后台统计日志和统计前端性能可以用GIF。
-</code></pre>
+<blockquote><p>ta完全修复了上述问题，只循环集合本身的元素。</p></blockquote>
 
-<p><font color=SeaGreen>4. SVG</font></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ar a=['A','B','C'];
+</span><span class='line'>a.name='Bob';
+</span><span class='line'>for(var x in a){
+</span><span class='line'>  console.log(x);//'A','B','C'
+</span><span class='line'>  console.log(a[x]);//undefined,undefined,undefined
+</span><span class='line'>  console.log(a.length);//3
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
 
-<pre><code>矢量图形、无损压缩、绘制路径xml语言（可以编程画出图像、圆角、锯齿处理得相当好）、浏览器支持差，主要用于移动端font-face。
-</code></pre>
 </div>
 
 
@@ -125,7 +145,7 @@
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/tu-pian-li-lun-ji-chu/'>图片理论基础</a>
+    <a class='category' href='/blog/categories/javascript/'>javascript</a>
   
 </span>
 
@@ -156,7 +176,7 @@
     <p class="meta">
       
       
-        <a class="basic-alignment right" href="/blog/2017/08/07/demo02/" title="Next Post: Response layout">Response layout &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2017/08/08/demo02/" title="Next Post: Js笔记">Js笔记 &raquo;</a>
       
     </p>
   </footer>
@@ -171,23 +191,23 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2017/09/12/demo10/">Demo10</a>
+        <a href="/blog/2017/09/12/demo10/">Js笔记</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/08/24/demo09/">Determinate</a>
+        <a href="/blog/2017/08/24/demo09/">词</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/08/19/demo08/">React</a>
+        <a href="/blog/2017/08/19/demo08/">Js笔记</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/08/17/demo07/">Compass</a>
+        <a href="/blog/2017/08/17/demo07/">Js笔记</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/08/11/demo06/">Event Handler</a>
+        <a href="/blog/2017/08/11/demo06/">Js笔记</a>
       </li>
     
   </ul>

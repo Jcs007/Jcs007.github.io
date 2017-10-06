@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://jcs007.github.io/atom.xml" rel="self"/>
   <link href="http://jcs007.github.io/"/>
-  <updated>2017-09-30T21:24:58+08:00</updated>
+  <updated>2017-10-07T00:14:37+08:00</updated>
   <id>http://jcs007.github.io/</id>
   <author>
     <name><![CDATA[Jcs007]]></name>
@@ -14,374 +14,55 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Demo10]]></title>
+    <title type="html"><![CDATA[Js笔记]]></title>
     <link href="http://jcs007.github.io/blog/2017/09/12/demo10/"/>
     <updated>2017-09-12T17:11:15+08:00</updated>
     <id>http://jcs007.github.io/blog/2017/09/12/demo10</id>
-    <content type="html"><![CDATA[<h1>DOM</h1>
-
-<h3>使用write()和writeIn()方法动态的包含外部资源，例如javascript文件等，必须注意不能像下面的例子直接包含字符串“</script>”。这样会导致该字符串被解释为脚本块的结束，它后面的代码将无法执行。</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;html&gt;
-</span><span class='line'>&lt;head&gt;
-</span><span class='line'>  &lt;title&gt;document.write()&lt;/title&gt;
-</span><span class='line'>&lt;/head&gt;
-</span><span class='line'>&lt;body&gt;
-</span><span class='line'>  &lt;script type="text/javascript"&gt;
-</span><span class='line'>      document.write("&lt;script type=\"text/javascript\" src=\"file.js\"&gt;"+"&lt;/script&gt;");
-</span><span class='line'>  &lt;/script&gt;
-</span><span class='line'>&lt;/body&gt;
-</span><span class='line'>&lt;/html&gt;</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>字符串"</script>&ldquo;将被解释为与外部的<script>标签匹配，结果文本&rdquo;);将会出现在页面中。为了避免这个问题，在字符串"</script>&ldquo;中加入转义字符\即可。</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;html&gt;
-</span><span class='line'>&lt;head&gt;
-</span><span class='line'>  &lt;title&gt;document.write()&lt;/title&gt;
-</span><span class='line'>&lt;/head&gt;
-</span><span class='line'>&lt;body&gt;
-</span><span class='line'>  &lt;script type="text/javascript"&gt;
-</span><span class='line'>      document.write("&lt;script type=\"text/javascript\" src=\"file.js\"&gt;"+"&lt;\/script&gt;");
-</span><span class='line'>  &lt;/script&gt;
-</span><span class='line'>&lt;/body&gt;
-</span><span class='line'>&lt;/html&gt;</span></code></pre></td></tr></table></div></figure>
-
+    <content type="html"><![CDATA[<h1>wait</h1>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Determinate]]></title>
+    <title type="html"><![CDATA[词]]></title>
     <link href="http://jcs007.github.io/blog/2017/08/24/demo09/"/>
     <updated>2017-08-24T21:05:02+08:00</updated>
     <id>http://jcs007.github.io/blog/2017/08/24/demo09</id>
-    <content type="html"><![CDATA[<h1>行列式知识点</h1>
+    <content type="html"><![CDATA[<h1>悟</h1>
 
-<ul>
-<li><p>运算法则</p>
+<blockquote><p>灯下沉思，柔光发间过，斑驳影。</p>
 
-<ul>
-<li><p>对角线法则</p></li>
-<li><p>余子式和代数余子式</p>
+<p>未知去年时候，可曾相忆？</p>
 
-<ul>
-<li><p>定理1、行列式等于它的任意一行或一列的所有元素与他们各自对应的代数余子式的乘积的和。</p></li>
-<li><p>定理2、行列式的某一行或一列的各元素与另一行或一列对应元素的代数余子式的乘积的和等于零。</p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<p>叹经年，谁于我醉，只是桃红，芭蕉翠绿落泪滴！</p>
 
+<p>去千里，纵然不是繁华梦，温柔刺入心！</p>
+
+<p>豪情千丈，万丈，亿百丈，难填胸中若谷。</p>
+
+<p>何年山巅衣袂飘，一曲洞箫，云浮我指尖！</p></blockquote>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[React]]></title>
+    <title type="html"><![CDATA[Js笔记]]></title>
     <link href="http://jcs007.github.io/blog/2017/08/19/demo08/"/>
     <updated>2017-08-19T00:01:36+08:00</updated>
     <id>http://jcs007.github.io/blog/2017/08/19/demo08</id>
-    <content type="html"><![CDATA[<h1>React入门</h1>
-
-<ul>
-<li>使用React的网页源码，结构如下。</li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;!DOCTYPE html&gt;
-</span><span class='line'>&lt;html&gt;
-</span><span class='line'>  &lt;head&gt;
-</span><span class='line'>    &lt;script src="react.js"&gt;&lt;/script&gt;
-</span><span class='line'>    &lt;script src="react-dom.js"&gt;&lt;/script&gt;
-</span><span class='line'>    &lt;script src="browser.min.js"&gt;&lt;/script&gt;
-</span><span class='line'>  &lt;/head&gt;
-</span><span class='line'>  &lt;body&gt;
-</span><span class='line'>    &lt;div id="example"&gt;&lt;/div&gt;
-</span><span class='line'>    &lt;script type="text/babel"&gt;
-</span><span class='line'>      // ** Our code goes here! **
-</span><span class='line'>    &lt;/script&gt;
-</span><span class='line'>  &lt;/body&gt;
-</span><span class='line'>&lt;/html&gt;</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>ReactDOM.render是React的最基本的方法，用于将模版转为HTML语言，并插入指定的DOM节点。</li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ReactDOM.render(
-</span><span class='line'>  &lt;h1&gt;Hello, world!&lt;/h1&gt;,
-</span><span class='line'>  document.getElementById('example')
-</span><span class='line'>);</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>JSX语法</li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>var names = ['Alice', 'Emily', 'Kate'];
-</span><span class='line'>
-</span><span class='line'>ReactDOM.render(
-</span><span class='line'>  &lt;div&gt;
-</span><span class='line'>  {
-</span><span class='line'>    names.map(function (name) {
-</span><span class='line'>      return &lt;div&gt;Hello, {name}!&lt;/div&gt;
-</span><span class='line'>    })
-</span><span class='line'>  }
-</span><span class='line'>  &lt;/div&gt;,
-</span><span class='line'>  document.getElementById('example')
-</span><span class='line'>);</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>组件</li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>var HelloMessage = React.createClass({
-</span><span class='line'>  render: function() {
-</span><span class='line'>    return &lt;h1&gt;Hello {this.props.name}&lt;/h1&gt;;
-</span><span class='line'>  }
-</span><span class='line'>});
-</span><span class='line'>
-</span><span class='line'>ReactDOM.render(
-</span><span class='line'>  &lt;HelloMessage name="John" /&gt;,
-</span><span class='line'>  document.getElementById('example')
-</span><span class='line'>);</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>this.props.children</li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>var NotesList = React.createClass({
-</span><span class='line'>  render: function() {
-</span><span class='line'>    return (
-</span><span class='line'>      &lt;ol&gt;
-</span><span class='line'>      {
-</span><span class='line'>        React.Children.map(this.props.children, function (child) {
-</span><span class='line'>          return &lt;li&gt;{child}&lt;/li&gt;;
-</span><span class='line'>        })
-</span><span class='line'>      }
-</span><span class='line'>      &lt;/ol&gt;
-</span><span class='line'>    );
-</span><span class='line'>  }
-</span><span class='line'>});
-</span><span class='line'>
-</span><span class='line'>ReactDOM.render(
-</span><span class='line'>  &lt;NotesList&gt;
-</span><span class='line'>    &lt;span&gt;hello&lt;/span&gt;
-</span><span class='line'>    &lt;span&gt;world&lt;/span&gt;
-</span><span class='line'>  &lt;/NotesList&gt;,
-</span><span class='line'>  document.body
-</span><span class='line'>);</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>PropTypes</li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>var MyTitle = React.createClass({
-</span><span class='line'>  propTypes: {
-</span><span class='line'>    title: React.PropTypes.string.isRequired,
-</span><span class='line'>  },
-</span><span class='line'>
-</span><span class='line'>  render: function() {
-</span><span class='line'>     return &lt;h1&gt; {this.props.title} &lt;/h1&gt;;
-</span><span class='line'>   }
-</span><span class='line'>});
-</span><span class='line'>var data = 123;
-</span><span class='line'>
-</span><span class='line'>ReactDOM.render(
-</span><span class='line'>  &lt;MyTitle title={data} /&gt;,
-</span><span class='line'>  document.body
-</span><span class='line'>);</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>getDefaultProps方法可以用来设置组件属性的默认值。</li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>var MyTitle = React.createClass({
-</span><span class='line'>  getDefaultProps : function () {
-</span><span class='line'>    return {
-</span><span class='line'>      title : 'Hello World'
-</span><span class='line'>    };
-</span><span class='line'>  },
-</span><span class='line'>
-</span><span class='line'>  render: function() {
-</span><span class='line'>     return &lt;h1&gt; {this.props.title} &lt;/h1&gt;;
-</span><span class='line'>   }
-</span><span class='line'>});
-</span><span class='line'>
-</span><span class='line'>ReactDOM.render(
-</span><span class='line'>  &lt;MyTitle /&gt;,
-</span><span class='line'>  document.body
-</span><span class='line'>);</span></code></pre></td></tr></table></div></figure>
-
+    <content type="html"><![CDATA[<h1>wait</h1>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Compass]]></title>
+    <title type="html"><![CDATA[Js笔记]]></title>
     <link href="http://jcs007.github.io/blog/2017/08/17/demo07/"/>
     <updated>2017-08-17T22:49:15+08:00</updated>
     <id>http://jcs007.github.io/blog/2017/08/17/demo07</id>
-    <content type="html"><![CDATA[<h1>Compass</h1>
-
-<ul>
-<li><p>CSS功能强大，可以实现复杂的布局和绚丽的效果，逐步变得不可或缺。CSS又颇具痛点，没有算法，没有数据结构，没有逻辑控制，没有封装，没有复用。</p></li>
-<li><p>CSS技术的飞速发展，各种高端特征飞扑而来，但是兼容性问题、种种bug问题日益严重，CSS开发变得越来越复杂。如何提高CSS的开发效率、降低CSS的维护成本&mdash;sass。</p></li>
-<li><p>面向对象CSS的注意事项：</p>
-
-<ul>
-<li>不要直接定义子节点，应把共性声明放到父类。</li>
-<li>结构和皮肤相分离。</li>
-<li>容器和内容相分离。</li>
-<li>抽象出可重用的元素，建好组件库，在组件库内寻找可用的元素组装页面。</li>
-<li>往你想要扩展的对象本身增加class而不是他的父节点。</li>
-<li>对象应保持独立性。</li>
-<li>避免使用ID选择器，权重太高，无法重用。</li>
-<li>避免位置相关的样式。</li>
-<li>保证选择器相同的权重。</li>
-<li>类名简短、清晰、语义化。</li>
-</ul>
-</li>
-<li><p>compass常用命令</p>
-
-<ul>
-<li>compass create</li>
-<li>compass init</li>
-<li>compass clean</li>
-<li>compass compile</li>
-<li>compass watch</li>
-<li>compass stats</li>
-<li>compass validate</li>
-</ul>
-</li>
-</ul>
-
+    <content type="html"><![CDATA[<h1>wait</h1>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Event Handler]]></title>
+    <title type="html"><![CDATA[Js笔记]]></title>
     <link href="http://jcs007.github.io/blog/2017/08/11/demo06/"/>
     <updated>2017-08-11T23:16:35+08:00</updated>
     <id>http://jcs007.github.io/blog/2017/08/11/demo06</id>
@@ -452,269 +133,175 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Basis of Picture Theory---02]]></title>
+    <title type="html"><![CDATA[诗]]></title>
     <link href="http://jcs007.github.io/blog/2017/08/11/demo05/"/>
     <updated>2017-08-11T21:59:03+08:00</updated>
     <id>http://jcs007.github.io/blog/2017/08/11/demo05</id>
-    <content type="html"><![CDATA[<h1>网页里的图片</h1>
+    <content type="html"><![CDATA[<h1>晨练时想</h1>
 
-<ul>
-<li><p>图片的引入有两种方式：</p>
+<blockquote><p>长桥跨湖上，</p>
 
-<ul>
-<li><p><img>标签引入</p></li>
-<li><p>背景图片url引入</p></li>
-</ul>
+<p>桂香满园中。</p>
 
+<p>旭日迎垂柳，</p>
 
-<blockquote><p><img>标签方便搜索引擎找到图像并抓取数据，一般logo和“海报”区都用<img>标签引入。不希望搜索引擎抓取尽量使用背景图像的方式制作。IMG可以提高搜索引擎的搜索关键词。</p></blockquote></li>
-</ul>
-
-
-<h2>为了使网页快速的打开，其中一个解决方法是使网页图片占内存尽量小。下面是几种用PS处理图片大小的办法。</h2>
-
-<ul>
-<li><p>大图保存用存储为web所用格式&mdash;【200kb到500kb之间】。</p></li>
-<li><p>色彩丰富的图片存储为JPG格式。</p></li>
-<li><p>色彩单一，精度要求不高的存储为GIF格式。</p></li>
-<li><p>色彩不丰富，精度要求高的LOGO存储为PNG格式。</p></li>
-<li><p>小图单击右键转为智能对象，可快速保存对象。</p></li>
-<li><p>大图用选区选取图像区域，采用合并拷贝的方式。然后文件&ndash;新建区域&ndash;粘贴刚才拷贝的大图&ndash;使用“存储为web使用格式”可以优化调节图像品质以减小图像大小。</p></li>
-</ul>
-
+<p>涟漪一婆娑。</p></blockquote>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Advice for HTML]]></title>
+    <title type="html"><![CDATA[词]]></title>
     <link href="http://jcs007.github.io/blog/2017/08/10/demo04/"/>
-    <updated>2017-08-10T17:08:21+08:00</updated>
+    <updated>2017-08-10T21:58:21+08:00</updated>
     <id>http://jcs007.github.io/blog/2017/08/10/demo04</id>
-    <content type="html"><![CDATA[<h1>HTML的30条最佳实践</h1>
+    <content type="html"><![CDATA[<h1>睡前小序</h1>
 
-<p>1、保持标签闭合
-2、声明正确的文档类型
-3、永远不要使用内联样式
-4、将所有外部css文件放入head标签内
-5、JavaScript文件放在底部
-6、永远不要使用内联JavaScript
-7、边开发、边验证
-8、下载firebug
-9、保持标签名小写
-10、使用H1到H6标签
-11、写博客时，将H1留给文章标题
-12、下载ySlow
-13、使用无序列表（UL）包裹导航菜单
-14、学习如何应对IE
-15、选择合适的IDE
-16、上线前，压缩代码
-17、精简、精简、再精简
-18、给所有的图片加上“ALT”属性
-19、通宵达旦
-20、查看源代码
-21、为所有的元素定义样式
-22、使用第三方服务
-23、学习每一个HTML标签
-24、掌握photoshop
-25、参与社区讨论</p>
+<blockquote><p>天黑黑，暗暗更无影;夜静静，嘶嘶犹虫鸣。</p>
+
+<p>丹青悬住点难起，白纸未得白纸命。</p>
+
+<p>经年何似一日梦？无缘无份权作萍。</p>
+
+<p>落花随流水，只是天意;浮生逐美色，怕只无情。</p>
+
+<p>鸿雁不飞青鸟不至，木鱼无二枫叶不诗！</p>
+
+<p>偶忆起，喃喃问，知为谁吟？</p></blockquote>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Front End Test]]></title>
+    <title type="html"><![CDATA[Js笔记]]></title>
     <link href="http://jcs007.github.io/blog/2017/08/09/demo03/"/>
     <updated>2017-08-09T16:16:18+08:00</updated>
     <id>http://jcs007.github.io/blog/2017/08/09/demo03</id>
-    <content type="html"><![CDATA[<h1>前端面试题总结</h1>
+    <content type="html"><![CDATA[<h1>变量提升</h1>
 
-<ul>
-<li><p>对web标准盒w3c的理解和认识</p>
+<blockquote><p>javascript的函数定义的一个特点&mdash;先扫描整个函数体的语句，把所有申明的变量“提升”到函数顶部。</p></blockquote>
 
-<ul>
-<li>标签闭合、标签小写、不乱嵌套、提高搜索机器人的搜索几率【SEO】-HTML语义化、使用外链CSS和js脚本、结构行为表现的分离、文件下载与页面的速度更快、内容被更多的用户所访问、内容能被更广泛的设备所访问
-更少的代码和组件、容易维护、改版方便、不需要变动页面内容、提供打印版本不需要复制内容、提高网站易用性。</li>
-</ul>
-</li>
-<li><p>xhtml和HTML的区别</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>'use strict'
+</span><span class='line'>
+</span><span class='line'>function voo(){
+</span><span class='line'>  var x='Hello,'+y;
+</span><span class='line'>  console.log(x);
+</span><span class='line'>  var y='Bob';
+</span><span class='line'>}
+</span><span class='line'>voo();</span></code></pre></td></tr></table></div></figure>
 
-<ul>
-<li>HTML是一种基本的web网页设计语言，xhtml是一个基于XML的置标语言。最主要的不同：xhtml元素必须正确地嵌套、必须被关闭、标签名必须小写、xhtml文档必须拥有根元素。</li>
-</ul>
-</li>
-<li><p>Doctype严格模式与混杂模式，如何触发这两种模式，区分它们有何意义？</p>
 
-<ul>
-<li>用于声明文档使用规范（HTML/xhtml）一般为严格、过渡。基于框架的HTML文档加入XML声明可触发，解析方式更改为IE5.5，拥有IE5.5的bug。</li>
-</ul>
-</li>
-<li><p>行内元素有哪些？块级元素有哪些？CSS的盒模型？</p>
+<blockquote><p>虽然是strict模式，但语句var x=&lsquo;Hello,&rsquo;+y;并不报错，因为变量y的申明在后面。但是输出的是Hello,undefined,说明变量y的值为undefined。这是因为javascript引擎自动提升了变量y的申明，但没有提升变量y的赋值。</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Js笔记]]></title>
+    <link href="http://jcs007.github.io/blog/2017/08/08/demo02/"/>
+    <updated>2017-08-08T19:40:09+08:00</updated>
+    <id>http://jcs007.github.io/blog/2017/08/08/demo02</id>
+    <content type="html"><![CDATA[<h1>Argument</h1>
 
-<ul>
-<li>块级元素：div、p、h1、h2、h3、h4、form、ul;行内元素：a、b、br、i、span、input、select
-CSS基本盒模型：内容、border、margin、padding;弹性盒模型、流式布局、响应式布局、两列式布局、怪异盒模型【CSS Hack】、标准盒模型。</li>
-</ul>
-</li>
-<li><p>CSS引入方式有哪些？link和@import的区别是？</p>
+<blockquote><p>arguments只在函数内部起作用，并且永远指向当前函数的调用者传入的所有参数。类似Array,但是ta不是一个Array。</p></blockquote>
 
-<ul>
-<li>内联、内嵌、外链、导入;区别：同时加载、前者无兼容形问题，后者CSS2.1以下浏览器不支持、link支持使用js改变样式，后者不可。</li>
-</ul>
-</li>
-<li><p>CSS选择符有哪些？那些属性可以继承？优先级算法如何计算？内联和important哪个优先级高？</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>function voo(x){
+</span><span class='line'>  console.log(x);//输出调用者传入的第一个参数,23
+</span><span class='line'>  for(var i=0;i&lt;arguments.length;i++){
+</span><span class='line'>      console.log(arguments[i]);//23,24,25,26
+</span><span class='line'>  }
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>voo(23,24,25,26);</span></code></pre></td></tr></table></div></figure>
 
-<ul>
-<li>标签选择符、类选择符、ID选择符。继承不如指定。ID>class>标签选择。important的优先级更高。</li>
-</ul>
-</li>
-<li><p>前端页面有那三层构成？分别是什么？作用是什么？</p>
 
-<ul>
-<li>结构HTML、行为js、表现CSS。</li>
-</ul>
-</li>
-<li><p>IMG标签上的title和ALT属性的区别？</p>
+<blockquote><p>利用arguments，可以获得调用者传入的所有参数。即使函数不定义任何参数，还是可以拿到参数的值。</p>
 
-<ul>
-<li> ALT当图片不显示是用文字代表，title为该属性提供信息，语义化。</li>
-</ul>
-</li>
-<li><p>描述CSS reset的作用和用途</p>
+<p>实际上arguments最常用于判断传入参数的个数。</p></blockquote>
 
-<ul>
-<li>reset重置浏览器的CSS默认属性，浏览器的品种不同，样式不同，然后重置，让它们统一。</li>
-</ul>
-</li>
-<li><p>解释CSS sprite如何使用？</p>
-
-<ul>
-<li>CSS精灵把一堆小的图片整合到一张大的图片上，减少服务器对图片的请求次数。</li>
-</ul>
-</li>
-<li><p>为什么是语义化的HTML？</p>
-
-<ul>
-<li>直观的认识标签，对于搜索引擎的抓取有好处。</li>
-</ul>
-</li>
-<li><p>清除浮动的几种方式，各自的优缺点</p>
-
-<ul>
-<li><p>使用空标签清除浮动clear：both（理论上能清除任何标签。。。增加无意义的标签）</p></li>
-<li><p>使用overflow:auto(空标签元素清除浮动而不得不增加无意义代码的弊端，使用zoom：1用于兼容IE)</p></li>
-<li><p>使用after伪元素清除浮动（用于非IE浏览器）</p></li>
-</ul>
-</li>
-</ul>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>//voo(a[,b],c)   接收2到3个参数，b是可选参数。如果传入2个参数，b默认为null。
+</span><span class='line'>
+</span><span class='line'>function voo(a,b,c){
+</span><span class='line'>  if(arguments.length===2){
+</span><span class='line'>  //实际拿到的参数是a和b,c为undefined
+</span><span class='line'>  
+</span><span class='line'>  c=b;//把b赋值给c
+</span><span class='line'>  b=null;//b变为默认
+</span><span class='line'>  }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Response Layout]]></title>
-    <link href="http://jcs007.github.io/blog/2017/08/07/demo02/"/>
-    <updated>2017-08-07T13:43:29+08:00</updated>
-    <id>http://jcs007.github.io/blog/2017/08/07/demo02</id>
-    <content type="html"><![CDATA[<h1>响应式布局</h1>
-
-<ul>
-<li><p>@media</p>
-
-<blockquote><p>Media Queries：其作用就是允许添加表达式用以确定媒体的环境情况，以此来应用不同的样式表。换句话说，其允许我们在不改变内容的情况下，改变页面的布局以精确适应不同的设备</p></blockquote>
-
-<ul>
-<li><p>适配移动端，在head标签里加入一下语句
-<code>
-&lt;meta name="viewport" content="width=device-width,initial-scale=1"/&gt;
-</code></p></li>
-<li><p>响应式布局的写法</p></li>
-</ul>
-
-
-<pre><code class="``">  1、&lt;link rel="stylesheet" type="text/css" href="styleB.css" media="screen and (min-width:600px) and (max-width:800px)"&gt;
-</code></pre>
-
-<pre><code class="``">  2、&lt;link rel="stylesheet" type="text/css" href="styleA.css" media="screen and (min-width:400px)"&gt;
-</code></pre>
-
-<pre><code class="``">  3、&lt;link rel="stylesheet" media="only screen and(-webkit-min-device-pixel-ratio:2)" type="text/css" href="iphone4.css"/&gt;/*(orientation:portrait)横向（landscape)*/
-</code></pre>
-
-<pre><code class="``">  4、&lt;style type="text/css"&gt;
-      @media only screen and(max-width:400px){/*当屏幕尺寸小于400px时，应用下面的CSS样式*/
-          .class{
-              background:#ccc;
-          }
-      }
-      &lt;/style&gt;
-</code></pre>
-
-<ul>
-<li>Hack（老式浏览器并不支持Media Queries,比如IE9，可以借助JS的库）</li>
-</ul>
-
-
-<pre><code class="``">  &lt;!--[if it IE9]&gt;
-      &lt;script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"&gt;&lt;/script&gt;
-  &lt;![endif]--&gt;
-</code></pre>
-
-<ul>
-<li><p>注意事项</p>
-
-<ul>
-<li><p>First</p>
-
-<pre><code class="``">  html{font-size:62.5%;} font-size:2rem==font-size:20px;
-</code></pre>
-
-<blockquote><p>默认字体大小是16px,16*62.5%=10px,1rem=10px。rem只相对HTNL或body的字体大小，没有继承父级尺寸的关系，但是em有继承父级尺寸的关系。</p></blockquote></li>
-<li><p>Second</p>
-
-<blockquote><p>min-width&amp;max-width的意思是最小宽度和最大宽度</p></blockquote></li>
-<li><p>Third</p>
-
-<blockquote><p>div布局尽量用百分比，不使用固定像素</p></blockquote></li>
-<li><p>Forth</p>
-
-<pre><code class="``">  box-sizing:border-box;
-</code></pre>
-
-<blockquote><p>标准盒模型里面撑的时候，外面会变大，设置了box-sizing后，固定和盒模型的大小，不会被撑大。</p></blockquote></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Basis of Picture Theory]]></title>
+    <title type="html"><![CDATA[Js笔记]]></title>
     <link href="http://jcs007.github.io/blog/2017/08/07/demo01/"/>
     <updated>2017-08-07T13:29:29+08:00</updated>
     <id>http://jcs007.github.io/blog/2017/08/07/demo01</id>
-    <content type="html"><![CDATA[<h2>常见图片格式</h2>
+    <content type="html"><![CDATA[<h1>for&hellip;in&hellip;和for&hellip;of&hellip;的区别。</h1>
 
-<p><font color=Peru>1. PNG</font></p>
+<h2>for&hellip;in&hellip;</h2>
 
-<pre><code>透明、无损压缩、色彩少、ie6不支持、渐进显示和流式读写（网速慢时先出现轮廓，再逐渐清晰---递增式编码[Progressive Encoding])
-</code></pre>
+<blockquote><p>由于历史遗留问题，ta遍历的实际上是对象的属性名称。一个Array数组实际上是一个对象，ta的每个元素的索引被视为一个属性。当手动给Array对象添加了额外的属性后，for&hellip;in&hellip;循环将带来意想不到的意外效果。</p></blockquote>
 
-<p><font color=VioletRed>2. JPG</font></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var a=['A','B','C'];
+</span><span class='line'>a.name='Bob';
+</span><span class='line'>for(var x in a){
+</span><span class='line'>  console.log(x);//'0','1','2','name'
+</span><span class='line'>  console.log(a[x]);//'A','B','C','Bob'
+</span><span class='line'>  console.log(a.length);//3
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
 
-<pre><code>色彩多、有损压缩、基本显示效果（从上到下一条一条逐渐加载---顺序编码[Sequential Encoding]）
-</code></pre>
 
-<p><font color=GoldenRod>3. GIF</font></p>
+<h2>for&hellip;of&hellip;</h2>
 
-<pre><code>动态、可透明、不能半透、体积小、处理颜色少，处理锯齿效果差。后台统计日志和统计前端性能可以用GIF。
-</code></pre>
+<blockquote><p>ta完全修复了上述问题，只循环集合本身的元素。</p></blockquote>
 
-<p><font color=SeaGreen>4. SVG</font></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ar a=['A','B','C'];
+</span><span class='line'>a.name='Bob';
+</span><span class='line'>for(var x in a){
+</span><span class='line'>  console.log(x);//'A','B','C'
+</span><span class='line'>  console.log(a[x]);//undefined,undefined,undefined
+</span><span class='line'>  console.log(a.length);//3
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
 
-<pre><code>矢量图形、无损压缩、绘制路径xml语言（可以编程画出图像、圆角、锯齿处理得相当好）、浏览器支持差，主要用于移动端font-face。
-</code></pre>
 ]]></content>
   </entry>
   

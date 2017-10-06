@@ -5,12 +5,19 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Front End Test - My Octopress Blog</title>
+  <title>Js笔记 - My Octopress Blog</title>
   <meta name="author" content="Jcs007">
 
   
-  <meta name="description" content="前端面试题总结 对web标准盒w3c的理解和认识 标签闭合、标签小写、不乱嵌套、提高搜索机器人的搜索几率【SEO】-HTML语义化、使用外链CSS和js脚本、结构行为表现的分离、文件下载与页面的速度更快、内容被更多的用户所访问、内容能被更广泛的设备所访问
-更少的代码和组件、容易维护、改版方便、 &hellip;">
+  <meta name="description" content="变量提升 javascript的函数定义的一个特点&mdash;先扫描整个函数体的语句，把所有申明的变量“提升”到函数顶部。 1
+2
+3
+4
+5
+6
+7
+8
+'use strict' function voo(){ var x='Hello,'+y; console.log(x); var y=' &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,7 +76,7 @@
   
   <header>
     
-      <h1 class="entry-title">Front End Test</h1>
+      <h1 class="entry-title">Js笔记</h1>
     
     
       <p class="meta">
@@ -85,87 +92,29 @@
   </header>
 
 
-<div class="entry-content"><h1>前端面试题总结</h1>
+<div class="entry-content"><h1>变量提升</h1>
 
-<ul>
-<li><p>对web标准盒w3c的理解和认识</p>
+<blockquote><p>javascript的函数定义的一个特点&mdash;先扫描整个函数体的语句，把所有申明的变量“提升”到函数顶部。</p></blockquote>
 
-<ul>
-<li>标签闭合、标签小写、不乱嵌套、提高搜索机器人的搜索几率【SEO】-HTML语义化、使用外链CSS和js脚本、结构行为表现的分离、文件下载与页面的速度更快、内容被更多的用户所访问、内容能被更广泛的设备所访问
-更少的代码和组件、容易维护、改版方便、不需要变动页面内容、提供打印版本不需要复制内容、提高网站易用性。</li>
-</ul>
-</li>
-<li><p>xhtml和HTML的区别</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>'use strict'
+</span><span class='line'>
+</span><span class='line'>function voo(){
+</span><span class='line'>  var x='Hello,'+y;
+</span><span class='line'>  console.log(x);
+</span><span class='line'>  var y='Bob';
+</span><span class='line'>}
+</span><span class='line'>voo();</span></code></pre></td></tr></table></div></figure>
 
-<ul>
-<li>HTML是一种基本的web网页设计语言，xhtml是一个基于XML的置标语言。最主要的不同：xhtml元素必须正确地嵌套、必须被关闭、标签名必须小写、xhtml文档必须拥有根元素。</li>
-</ul>
-</li>
-<li><p>Doctype严格模式与混杂模式，如何触发这两种模式，区分它们有何意义？</p>
 
-<ul>
-<li>用于声明文档使用规范（HTML/xhtml）一般为严格、过渡。基于框架的HTML文档加入XML声明可触发，解析方式更改为IE5.5，拥有IE5.5的bug。</li>
-</ul>
-</li>
-<li><p>行内元素有哪些？块级元素有哪些？CSS的盒模型？</p>
-
-<ul>
-<li>块级元素：div、p、h1、h2、h3、h4、form、ul;行内元素：a、b、br、i、span、input、select
-CSS基本盒模型：内容、border、margin、padding;弹性盒模型、流式布局、响应式布局、两列式布局、怪异盒模型【CSS Hack】、标准盒模型。</li>
-</ul>
-</li>
-<li><p>CSS引入方式有哪些？link和@import的区别是？</p>
-
-<ul>
-<li>内联、内嵌、外链、导入;区别：同时加载、前者无兼容形问题，后者CSS2.1以下浏览器不支持、link支持使用js改变样式，后者不可。</li>
-</ul>
-</li>
-<li><p>CSS选择符有哪些？那些属性可以继承？优先级算法如何计算？内联和important哪个优先级高？</p>
-
-<ul>
-<li>标签选择符、类选择符、ID选择符。继承不如指定。ID>class>标签选择。important的优先级更高。</li>
-</ul>
-</li>
-<li><p>前端页面有那三层构成？分别是什么？作用是什么？</p>
-
-<ul>
-<li>结构HTML、行为js、表现CSS。</li>
-</ul>
-</li>
-<li><p>IMG标签上的title和ALT属性的区别？</p>
-
-<ul>
-<li> ALT当图片不显示是用文字代表，title为该属性提供信息，语义化。</li>
-</ul>
-</li>
-<li><p>描述CSS reset的作用和用途</p>
-
-<ul>
-<li>reset重置浏览器的CSS默认属性，浏览器的品种不同，样式不同，然后重置，让它们统一。</li>
-</ul>
-</li>
-<li><p>解释CSS sprite如何使用？</p>
-
-<ul>
-<li>CSS精灵把一堆小的图片整合到一张大的图片上，减少服务器对图片的请求次数。</li>
-</ul>
-</li>
-<li><p>为什么是语义化的HTML？</p>
-
-<ul>
-<li>直观的认识标签，对于搜索引擎的抓取有好处。</li>
-</ul>
-</li>
-<li><p>清除浮动的几种方式，各自的优缺点</p>
-
-<ul>
-<li><p>使用空标签清除浮动clear：both（理论上能清除任何标签。。。增加无意义的标签）</p></li>
-<li><p>使用overflow:auto(空标签元素清除浮动而不得不增加无意义代码的弊端，使用zoom：1用于兼容IE)</p></li>
-<li><p>使用after伪元素清除浮动（用于非IE浏览器）</p></li>
-</ul>
-</li>
-</ul>
-
+<blockquote><p>虽然是strict模式，但语句var x=&lsquo;Hello,&rsquo;+y;并不报错，因为变量y的申明在后面。但是输出的是Hello,undefined,说明变量y的值为undefined。这是因为javascript引擎自动提升了变量y的申明，但没有提升变量y的赋值。</p></blockquote>
 </div>
 
 
@@ -186,7 +135,7 @@ CSS基本盒模型：内容、border、margin、padding;弹性盒模型、流式
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/mian-shi-ti/'>面试题</a>
+    <a class='category' href='/blog/categories/javascript/'>javascript</a>
   
 </span>
 
@@ -216,10 +165,10 @@ CSS基本盒模型：内容、border、margin、padding;弹性盒模型、流式
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2017/08/07/demo02/" title="Previous Post: Response layout">&laquo; Response layout</a>
+        <a class="basic-alignment left" href="/blog/2017/08/08/demo02/" title="Previous Post: Js笔记">&laquo; Js笔记</a>
       
       
-        <a class="basic-alignment right" href="/blog/2017/08/10/demo04/" title="Next Post: advice for HTML">advice for HTML &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2017/08/10/demo04/" title="Next Post: 词">词 &raquo;</a>
       
     </p>
   </footer>
@@ -234,23 +183,23 @@ CSS基本盒模型：内容、border、margin、padding;弹性盒模型、流式
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2017/09/12/demo10/">Demo10</a>
+        <a href="/blog/2017/09/12/demo10/">Js笔记</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/08/24/demo09/">Determinate</a>
+        <a href="/blog/2017/08/24/demo09/">词</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/08/19/demo08/">React</a>
+        <a href="/blog/2017/08/19/demo08/">Js笔记</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/08/17/demo07/">Compass</a>
+        <a href="/blog/2017/08/17/demo07/">Js笔记</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/08/11/demo06/">Event Handler</a>
+        <a href="/blog/2017/08/11/demo06/">Js笔记</a>
       </li>
     
   </ul>
