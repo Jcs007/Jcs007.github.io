@@ -9,8 +9,16 @@
   <meta name="author" content="Jcs007">
 
   
-  <meta name="description" content="wait
-">
+  <meta name="description" content="局部作用域 由于JavaScript的变量作用域实际上是函数内部，在for循环等语句块中应该是无法定义具有局部作用域的变量的。 1
+2
+3
+4
+5
+6
+7
+8
+9
+'use strict'; function voo() { for (var i=0; i&lt;100; i++) { // } &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,7 +93,51 @@
   </header>
 
 
-<div class="entry-content"><h1>wait</h1>
+<div class="entry-content"><h1>局部作用域</h1>
+
+<blockquote><p>由于JavaScript的变量作用域实际上是函数内部，在for循环等语句块中应该是无法定义具有局部作用域的变量的。</p></blockquote>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>'use strict';
+</span><span class='line'>
+</span><span class='line'>function voo() {
+</span><span class='line'>    for (var i=0; i&lt;100; i++) {
+</span><span class='line'>        //
+</span><span class='line'>    }
+</span><span class='line'>    i += 100; // 仍然可以引用变量i
+</span><span class='line'>  console.log(i);//200
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<blockquote><p>为了解决块级作用域，ES6引入了新的关键字let,用let替代var可以申明一个块级作用域的变量。</p></blockquote>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>'use strict';
+</span><span class='line'>
+</span><span class='line'>function voo() {
+</span><span class='line'>    var sum = 0;
+</span><span class='line'>    for (let i=0; i&lt;100; i++) {
+</span><span class='line'>        sum += i;
+</span><span class='line'>    }
+</span><span class='line'>    i += 1; // SyntaxError
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
 </div>
 
 
@@ -136,7 +188,7 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2017/08/17/demo07/" title="Previous Post: Js笔记">&laquo; Js笔记</a>
+        <a class="basic-alignment left" href="/blog/2017/08/17/demo07/" title="Previous Post: 文">&laquo; 文</a>
       
       
         <a class="basic-alignment right" href="/blog/2017/08/24/demo09/" title="Next Post: 词">词 &raquo;</a>
@@ -166,7 +218,7 @@
       </li>
     
       <li class="post">
-        <a href="/blog/2017/08/17/demo07/">Js笔记</a>
+        <a href="/blog/2017/08/17/demo07/">文</a>
       </li>
     
       <li class="post">

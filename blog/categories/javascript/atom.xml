@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Javascript | My Octopress Blog]]></title>
   <link href="http://jcs007.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://jcs007.github.io/"/>
-  <updated>2017-10-07T00:14:37+08:00</updated>
+  <updated>2017-10-07T21:43:01+08:00</updated>
   <id>http://jcs007.github.io/</id>
   <author>
     <name><![CDATA[Jcs007]]></name>
@@ -16,9 +16,100 @@
   <entry>
     <title type="html"><![CDATA[Js笔记]]></title>
     <link href="http://jcs007.github.io/blog/2017/09/12/demo10/"/>
-    <updated>2017-09-12T17:11:15+08:00</updated>
+    <updated>2017-09-12T21:11:15+08:00</updated>
     <id>http://jcs007.github.io/blog/2017/09/12/demo10</id>
-    <content type="html"><![CDATA[<h1>wait</h1>
+    <content type="html"><![CDATA[<h1>Js大坑之&mdash;this</h1>
+
+<blockquote><p>在一个方法内部，this是一个特殊变量，ta始终指向当前对象。</p></blockquote>
+
+<pre><code>function getAge() {
+    var y = new Date().getFullYear();
+    return y - this.birth;
+}
+
+var xiaoming = {
+    name: '小明',
+    birth: 1990,
+    age: getAge
+};
+
+xiaoming.age(); // 27, 正常结果
+getAge(); // NaN
+</code></pre>
+
+<blockquote><p>JavaScript的函数内部如果调用了this，这个this指向谁&mdash;答案是：视情况而定。</p>
+
+<p>如果以对象的方法形式调用，比如xiaoming.age(),该函数的this指向被调用的对象&mdash;xiaoming。</p>
+
+<p>如果单独调用函数，比如getAge(),此时，该函数this指向全局对象&mdash;window。</p></blockquote>
+
+<pre><code>var fn = xiaoming.age; // 先拿到xiaoming的age函数
+fn(); // NaN
+</code></pre>
+
+<blockquote><p>这样写也是不行的，要保证this指向正确，必须用obj.xxx()的形式调用。</p>
+
+<p>ECMA决定，在strict模式下让函数的this指向undefined。</p></blockquote>
+
+<pre><code>'use strict';
+
+var xiaoming = {
+    name: '小明',
+    birth: 1990,
+    age: function () {
+        var y = new Date().getFullYear();
+        return y - this.birth;
+    }
+};
+
+var fn = xiaoming.age;
+fn(); // Uncaught TypeError: Cannot read property 'birth' of undefined
+</code></pre>
+
+<blockquote><p>这个方法只是让错误及时暴露出来，并没解决this应该指向的正确位置。</p>
+
+<p>如果把方法重构：</p></blockquote>
+
+<pre><code>'use strict';
+
+var xiaoming = {
+    name: '小明',
+    birth: 1990,
+    age: function () {
+        function getAgeFromBirth() {
+            var y = new Date().getFullYear();
+            return y - this.birth;
+        }
+        return getAgeFromBirth();
+    }
+};
+
+xiaoming.age(); // Uncaught TypeError: Cannot read property 'birth' of undefined
+</code></pre>
+
+<blockquote><p>结果又报错了！原因是this指针只在age方法的函数内指向xiaoming。</p>
+
+<p>在函数内部定义的函数，this又指向undefined了！（在非strict模式下，它重新指向全局对象window！）</p>
+
+<p>修复的办法为：用一个that变量首先捕获this。</p></blockquote>
+
+<pre><code>'use strict';
+
+var xiaoming = {
+    name: '小明',
+    birth: 1990,
+    age: function () {
+        var that = this; // 在方法内部一开始就捕获this
+        function getAgeFromBirth() {
+            var y = new Date().getFullYear();
+            return y - that.birth; // 用that而不是this
+        }
+        return getAgeFromBirth();
+    }
+};
+
+xiaoming.age(); // 25
+</code></pre>
 ]]></content>
   </entry>
   
@@ -27,16 +118,33 @@
     <link href="http://jcs007.github.io/blog/2017/08/19/demo08/"/>
     <updated>2017-08-19T00:01:36+08:00</updated>
     <id>http://jcs007.github.io/blog/2017/08/19/demo08</id>
-    <content type="html"><![CDATA[<h1>wait</h1>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Js笔记]]></title>
-    <link href="http://jcs007.github.io/blog/2017/08/17/demo07/"/>
-    <updated>2017-08-17T22:49:15+08:00</updated>
-    <id>http://jcs007.github.io/blog/2017/08/17/demo07</id>
-    <content type="html"><![CDATA[<h1>wait</h1>
+    <content type="html"><![CDATA[<h1>局部作用域</h1>
+
+<blockquote><p>由于JavaScript的变量作用域实际上是函数内部，在for循环等语句块中应该是无法定义具有局部作用域的变量的。</p></blockquote>
+
+<pre><code>'use strict';
+
+function voo() {
+    for (var i=0; i&lt;100; i++) {
+        //
+    }
+    i += 100; // 仍然可以引用变量i
+    console.log(i);//200
+}
+</code></pre>
+
+<blockquote><p>为了解决块级作用域，ES6引入了新的关键字let,用let替代var可以申明一个块级作用域的变量。</p></blockquote>
+
+<pre><code>'use strict';
+
+function voo() {
+    var sum = 0;
+    for (let i=0; i&lt;100; i++) {
+        sum += i;
+    }
+    i += 1; // SyntaxError
+}
+</code></pre>
 ]]></content>
   </entry>
   
@@ -118,6 +226,43 @@ voo();
 </code></pre>
 
 <blockquote><p>虽然是strict模式，但语句var x=&lsquo;Hello,&rsquo;+y;并不报错，因为变量y的申明在后面。但是输出的是Hello,undefined,说明变量y的值为undefined。这是因为javascript引擎自动提升了变量y的申明，但没有提升变量y的赋值。</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Js笔记]]></title>
+    <link href="http://jcs007.github.io/blog/2017/08/08/demo02/"/>
+    <updated>2017-08-08T19:40:09+08:00</updated>
+    <id>http://jcs007.github.io/blog/2017/08/08/demo02</id>
+    <content type="html"><![CDATA[<h1>Argument</h1>
+
+<blockquote><p>arguments只在函数内部起作用，并且永远指向当前函数的调用者传入的所有参数。类似Array,但是ta不是一个Array。</p></blockquote>
+
+<pre><code>function voo(x){
+    console.log(x);//输出调用者传入的第一个参数,23
+    for(var i=0;i&lt;arguments.length;i++){
+        console.log(arguments[i]);//23,24,25,26
+    }
+}
+
+voo(23,24,25,26);
+</code></pre>
+
+<blockquote><p>利用arguments，可以获得调用者传入的所有参数。即使函数不定义任何参数，还是可以拿到参数的值。</p>
+
+<p>实际上arguments最常用于判断传入参数的个数。</p></blockquote>
+
+<pre><code>//voo(a[,b],c)   接收2到3个参数，b是可选参数。如果传入2个参数，b默认为null。
+
+function voo(a,b,c){
+    if(arguments.length===2){
+    //实际拿到的参数是a和b,c为undefined
+
+    c=b;//把b赋值给c
+    b=null;//b变为默认
+    }
+}
+</code></pre>
 ]]></content>
   </entry>
   
