@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>词 - 川石的窝</title>
+  <title>川石的窝</title>
   <meta name="author" content="镜川石">
 
   
-  <meta name="description" content="睡前小序 天黑黑，暗暗更无影;夜静静，嘶嘶犹虫鸣。 丹青悬住点难起，白纸未得白纸命。 经年何似一日梦？无缘无份权作萍。 落花随流水，只是天意;浮生逐美色，怕只无情。 鸿雁不飞青鸟不至，木鱼无二枫叶不诗！ 偶忆起，喃喃问，知为谁吟？
-">
+  <meta name="description" content="for&hellip;in&hellip;和for&hellip;of&hellip;的区别。 for&hellip;in&hellip; 由于历史遗留问题，ta遍历的实际上是对象的属性名称。一个Array数组实际上是一个对象，ta的每个元素的索引被视为一个属性。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcs007.github.io/blog/2017/08/10/demo04/">
+  <link rel="canonical" href="http://jcs007.github.io/posts/2/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="川石的窝" type="application/atom+xml">
@@ -65,12 +64,15 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div>
-<article class="hentry" role="article">
+      <div class="blog-index">
   
+  
+  
+    <article>
+      
   <header>
     
-      <h1 class="entry-title">词</h1>
+      <h1 class="entry-title"><a href="/blog/2017/08/07/demo01/">Js笔记</a></h1>
     
     
       <p class="meta">
@@ -79,87 +81,69 @@
 
 
 
-<time class='entry-date' datetime='2017-08-10T21:58:21+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>9:58 pm</span></time>
+<time class='entry-date' datetime='2017-08-07T13:29:29+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>1:29 pm</span></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h1>睡前小序</h1>
+  <div class="entry-content"><h1>for&hellip;in&hellip;和for&hellip;of&hellip;的区别。</h1>
 
-<blockquote><p>天黑黑，暗暗更无影;夜静静，嘶嘶犹虫鸣。</p>
+<h2>for&hellip;in&hellip;</h2>
 
-<p>丹青悬住点难起，白纸未得白纸命。</p>
+<blockquote><p>由于历史遗留问题，ta遍历的实际上是对象的属性名称。一个Array数组实际上是一个对象，ta的每个元素的索引被视为一个属性。当手动给Array对象添加了额外的属性后，for&hellip;in&hellip;循环将带来意想不到的意外效果。</p></blockquote>
 
-<p>经年何似一日梦？无缘无份权作萍。</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var a=['A','B','C'];
+</span><span class='line'>a.name='Bob';
+</span><span class='line'>for(var x in a){
+</span><span class='line'>  console.log(x);//'0','1','2','name'
+</span><span class='line'>  console.log(a[x]);//'A','B','C','Bob'
+</span><span class='line'>  console.log(a.length);//3
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
 
-<p>落花随流水，只是天意;浮生逐美色，怕只无情。</p>
 
-<p>鸿雁不飞青鸟不至，木鱼无二枫叶不诗！</p>
+<h2>for&hellip;of&hellip;</h2>
 
-<p>偶忆起，喃喃问，知为谁吟？</p></blockquote>
+<blockquote><p>ta完全修复了上述问题，只循环集合本身的元素。</p></blockquote>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ar a=['A','B','C'];
+</span><span class='line'>a.name='Bob';
+</span><span class='line'>for(var x in a){
+</span><span class='line'>  console.log(x);//'A','B','C'
+</span><span class='line'>  console.log(a[x]);//undefined,undefined,undefined
+</span><span class='line'>  console.log(a.length);//3
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
 </div>
-
-
-  <footer>
-    <p class="meta">
-      
+  
   
 
-<span class="byline author vcard">Posted by <span class="fn">镜川石</span></span>
 
-      
-
-
-
-
-<time class='entry-date' datetime='2017-08-10T21:58:21+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>9:58 pm</span></time>
-      
-
-<span class="categories">
+    </article>
   
-    <a class='category' href='/blog/categories/chuan-shi-yuan-chuang/'>川石原创</a>
-  
-</span>
-
-
-    </p>
+  <div class="pagination">
     
-      <div class="sharing">
-  
-  
-  
-  
-    <!-- JiaThis Button BEGIN -->
-<div class="jiathis_style_32x32">
-	<a class="jiathis_button_qzone"></a>
-	<a class="jiathis_button_tsina"></a>
-	<a class="jiathis_button_tqq"></a>
-	<a class="jiathis_button_weixin"></a>
-	<a class="jiathis_button_renren"></a>
-	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-	<a class="jiathis_counter_style"></a>
-</div>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
-<!-- JiaThis Button END -->
-  
-</div>
-
+    <a href="/blog/archives">Blog Archives</a>
     
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2017/08/09/demo03/" title="Previous Post: Js笔记">&laquo; Js笔记</a>
-      
-      
-        <a class="basic-alignment right" href="/blog/2017/08/11/demo05/" title="Next Post: 诗">诗 &raquo;</a>
-      
-    </p>
-  </footer>
-</article>
-
+    <a class="next" href="/index.html">Newer &rarr;</a>
+    
+  </div>
 </div>
-
 <aside class="sidebar">
   
     <section>
@@ -195,7 +179,6 @@
 
   
 </aside>
-
 
     </div>
   </div>
