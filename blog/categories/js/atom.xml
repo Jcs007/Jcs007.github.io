@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Js | 大象与小兔子]]></title>
   <link href="http://jcs007.github.io/blog/categories/js/atom.xml" rel="self"/>
   <link href="http://jcs007.github.io/"/>
-  <updated>2017-12-08T22:02:34+08:00</updated>
+  <updated>2017-12-08T22:08:09+08:00</updated>
   <id>http://jcs007.github.io/</id>
   <author>
     <name><![CDATA[镜川石]]></name>
@@ -127,7 +127,7 @@
 
 <h2>正则表达式里\b会把英文缩写，譬如I`m分成两个部分。</h2>
 
-<p>所以先将字符串安照空格拆分，然后使用charAt(0)选中首字符，再用replace()进行大写替换。</p>
+<h2>所以先将字符串安照空格拆分，然后使用charAt(0)选中首字符，再用replace()进行大写替换。</h2>
 
 <pre><code>function titleCase(str) {
   //将字符串转化为小写，并拆分成单词
