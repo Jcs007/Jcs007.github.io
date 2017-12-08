@@ -4,7 +4,7 @@
   <title><![CDATA[大象与小兔子]]></title>
   <link href="http://jcs007.github.io/atom.xml" rel="self"/>
   <link href="http://jcs007.github.io/"/>
-  <updated>2017-12-08T21:38:42+08:00</updated>
+  <updated>2017-12-08T21:47:10+08:00</updated>
   <id>http://jcs007.github.io/</id>
   <author>
     <name><![CDATA[镜川石]]></name>
@@ -230,7 +230,9 @@ alert(Math.min.apply(null,ta));//最小值
     <id>http://jcs007.github.io/blog/2017/08/11/demo05</id>
     <content type="html"><![CDATA[<p><img src="" alt="" /></p>
 
-<h2>正则表达式里\b会把英文缩写，譬如I`m分成两个部分。所以先将字符串安照空格拆分，然后使用charAt(0)选中首字符，再用replace()进行大写替换。</h2>
+<h2>正则表达式里\b会把英文缩写，譬如I`m分成两个部分。</h2>
+
+<p>所以先将字符串安照空格拆分，然后使用charAt(0)选中首字符，再用replace()进行大写替换。</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
