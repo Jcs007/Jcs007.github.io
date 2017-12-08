@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Js | 大象与小兔子]]></title>
+  <link href="http://jcs007.github.io/blog/categories/js/atom.xml" rel="self"/>
+  <link href="http://jcs007.github.io/"/>
+  <updated>2017-12-08T21:38:42+08:00</updated>
+  <id>http://jcs007.github.io/</id>
+  <author>
+    <name><![CDATA[镜川石]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[数组求最值]]></title>
+    <link href="http://jcs007.github.io/blog/2017/08/11/demo06/"/>
+    <updated>2017-08-11T23:16:35+08:00</updated>
+    <id>http://jcs007.github.io/blog/2017/08/11/demo06</id>
+    <content type="html"><![CDATA[<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1512728285928&amp;di=9861d7194f5b495e940c2f263560510e&amp;imgtype=0&amp;src=http%3A%2F%2Fd6.yihaodianimg.com%2FV00%2FM03%2F6E%2F12%2FCgQDsVPuWTKAX1HRAABDQMPD7mo00700.jpg" alt="数组求最值" /></p>
+
+<h2>方法一：</h2>
+
+<pre><code>###用Math.max和Math.min方法可以迅速得到结果。apply能让一个方法指定调用对象与传入参数，并且传入参数是以数组形式组织的。
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Array.max = function( array ){ 
+</span><span class='line'>    return Math.max.apply( Math, array );
+</span><span class='line'>};
+</span><span class='line'>Array.min = function( array ){ 
+</span><span class='line'>    return Math.min.apply( Math, array );
+</span><span class='line'>};</span></code></pre></td></tr></table></div></figure>
+
+###Math对象也是一个对象，so
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Array.prototype.max = function(){ 
+</span><span class='line'>    return Math.max.apply({},this) 
+</span><span class='line'>} 
+</span><span class='line'>Array.prototype.min = function(){ 
+</span><span class='line'>    return Math.min.apply({},this) 
+</span><span class='line'>} 
+</span><span class='line'>[1,2,3].max()// =&gt; 3 
+</span><span class='line'>[1,2,3].min()// =&gt; 1</span></code></pre></td></tr></table></div></figure>
+</code></pre>
+
+<h2>方法二：</h2>
+
+<pre><code>###封装
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>function getMaximin(arr,maximin) 
+</span><span class='line'>{ 
+</span><span class='line'>    if(maximin=="max") 
+</span><span class='line'>    { 
+</span><span class='line'>        return Math.max.apply(Math,arr); 
+</span><span class='line'>    }
+</span><span class='line'>    else if(maximin=="min") 
+</span><span class='line'>    { 
+</span><span class='line'>        return Math.min.apply(Math, arr); 
+</span><span class='line'>    } 
+</span><span class='line'>} 
+</span><span class='line'>var a=[3,2,4,2,10]; 
+</span><span class='line'>var b=[12,4,45,786,9,78]; 
+</span><span class='line'>console.log(getMaximin(a,"max"));//10
+</span><span class='line'>console.log(getMaximin(b,"min"));//04</span></code></pre></td></tr></table></div></figure>
+</code></pre>
+
+<h2>方法三：</h2>
+
+<pre><code>###最简
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var a=[1,2,3,5];
+</span><span class='line'>alert(Math.max.apply(null, a));//最大值
+</span><span class='line'>alert(Math.min.apply(null, a));//最小值</span></code></pre></td></tr></table></div></figure>
+
+###多维数组转换
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var a=[1,2,3,[5,6],[1,4,8]];
+</span><span class='line'>var ta=a.join(",").split(",");//转化为一维数组
+</span><span class='line'>alert(Math.max.apply(null,ta));//最大值
+</span><span class='line'>alert(Math.min.apply(null,ta));//最小值</span></code></pre></td></tr></table></div></figure>
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[字符串首字母大写的实现方式]]></title>
+    <link href="http://jcs007.github.io/blog/2017/08/11/demo05/"/>
+    <updated>2017-08-11T21:59:03+08:00</updated>
+    <id>http://jcs007.github.io/blog/2017/08/11/demo05</id>
+    <content type="html"><![CDATA[<p><img src="" alt="" /></p>
+
+<h2>正则表达式里\b会把英文缩写，譬如I`m分成两个部分。所以先将字符串安照空格拆分，然后使用charAt(0)选中首字符，再用replace()进行大写替换。</h2>
+
+<pre><code>function titleCase(str) {
+  //将字符串转化为小写，并拆分成单词
+  str=str.toLowerCase().split(" ");
+  //循环将每个单词的首字母大写
+  for(var i=0;i&lt;str.length;i++){
+    //选取首个字符
+    var char=str[i].charAt(0);
+    //将单子首字符替换为大写
+    str[i]=str[i].replace(char,function(s){return s.toUpperCase();});
+  }
+  //拼合数组
+  str=str.join(" ");
+  return str;
+}
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

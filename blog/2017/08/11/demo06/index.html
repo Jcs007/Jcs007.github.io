@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>抬头望 - 大象与小兔子</title>
+  <title>数组求最值 - 大象与小兔子</title>
   <meta name="author" content="镜川石">
 
   
-  <meta name="description" content=" 长桥下一水中流， 明灭处波光攒聚。 旭日鱼跃东升起， 云波涟漪荡开去。
-">
+  <meta name="description" content="方法一： ###用Math.max和Math.min方法可以迅速得到结果。apply能让一个方法指定调用对象与传入参数，并且传入参数是以数组形式组织的。 ```
+Array.max = function( array ){ return Math.max.apply( Math, array &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,7 +71,7 @@
   
   <header>
     
-      <h1 class="entry-title">抬头望</h1>
+      <h1 class="entry-title">数组求最值</h1>
     
     
       <p class="meta">
@@ -87,15 +87,77 @@
   </header>
 
 
-<div class="entry-content"><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1509116339415&amp;di=377474a2790d1c51d334181661628b69&amp;imgtype=0&amp;src=http%3A%2F%2Fimgstore.cdn.sogou.com%2Fapp%2Fa%2F100540002%2F445286.jpg" alt="水光熠熠" /></p>
+<div class="entry-content"><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1512728285928&amp;di=9861d7194f5b495e940c2f263560510e&amp;imgtype=0&amp;src=http%3A%2F%2Fd6.yihaodianimg.com%2FV00%2FM03%2F6E%2F12%2FCgQDsVPuWTKAX1HRAABDQMPD7mo00700.jpg" alt="数组求最值" /></p>
 
-<blockquote><p>长桥下一水中流，</p>
+<h2>方法一：</h2>
 
-<p>明灭处波光攒聚。</p>
+<pre><code>###用Math.max和Math.min方法可以迅速得到结果。apply能让一个方法指定调用对象与传入参数，并且传入参数是以数组形式组织的。
 
-<p>旭日鱼跃东升起，</p>
+```
+Array.max = function( array ){ 
+    return Math.max.apply( Math, array );
+};
+Array.min = function( array ){ 
+    return Math.min.apply( Math, array );
+};
+```
 
-<p>云波涟漪荡开去。</p></blockquote>
+###Math对象也是一个对象，so
+
+```
+Array.prototype.max = function(){ 
+    return Math.max.apply({},this) 
+} 
+Array.prototype.min = function(){ 
+    return Math.min.apply({},this) 
+} 
+[1,2,3].max()// =&gt; 3 
+[1,2,3].min()// =&gt; 1
+```
+</code></pre>
+
+<h2>方法二：</h2>
+
+<pre><code>###封装
+
+```
+function getMaximin(arr,maximin) 
+{ 
+    if(maximin=="max") 
+    { 
+        return Math.max.apply(Math,arr); 
+    }
+    else if(maximin=="min") 
+    { 
+        return Math.min.apply(Math, arr); 
+    } 
+} 
+var a=[3,2,4,2,10]; 
+var b=[12,4,45,786,9,78]; 
+console.log(getMaximin(a,"max"));//10
+console.log(getMaximin(b,"min"));//04
+```
+</code></pre>
+
+<h2>方法三：</h2>
+
+<pre><code>###最简
+
+```
+var a=[1,2,3,5];
+alert(Math.max.apply(null, a));//最大值
+alert(Math.min.apply(null, a));//最小值
+```
+
+###多维数组转换
+
+```
+var a=[1,2,3,[5,6],[1,4,8]];
+var ta=a.join(",").split(",");//转化为一维数组
+alert(Math.max.apply(null,ta));//最大值
+alert(Math.min.apply(null,ta));//最小值
+```
+</code></pre>
 </div>
 
 
@@ -116,7 +178,7 @@
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/chuan-shi-yuan-chuang/'>川石原创</a>
+    <a class='category' href='/blog/categories/js/'>js</a>
   
 </span>
 
@@ -146,7 +208,7 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2017/08/11/demo05/" title="Previous Post: 晨练时想">&laquo; 晨练时想</a>
+        <a class="basic-alignment left" href="/blog/2017/08/11/demo05/" title="Previous Post: 字符串首字母大写的实现方式">&laquo; 字符串首字母大写的实现方式</a>
       
       
         <a class="basic-alignment right" href="/blog/2017/08/17/demo07/" title="Next Post: 白龙马和小毛驴的故事">白龙马和小毛驴的故事 &raquo;</a>
@@ -168,7 +230,7 @@
       </li>
     
       <li class="post">
-        <a href="/blog/2017/09/12/demo10/">虾</a>
+        <a href="/blog/2017/09/12/demo10/">秘密</a>
       </li>
     
       <li class="post">
